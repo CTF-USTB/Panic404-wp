@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
       center: 'title',
       right: 'dayGridMonth'
     },
-    events: '/data/schedule.json', // 加载 WP JSON 数据
+    events: 'data/schedule.json', // 加载 WP JSON 数据
     eventContent: function(arg) {
       // 自定义事件显示样式
       let color = '#fff'; // 默认白色
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // 根据状态修改整个事件块样式
         let status = info.event.extendedProps.status;
         let color, textColor;
-        if(!info.event.type) {
+        if(!info.event.extendedProps.desc) {
             if (status === 'done') {
                 // color = '#4CAF50';
                 color = '#4ecd7cff';    // 亮绿色
@@ -57,8 +57,9 @@ document.addEventListener('DOMContentLoaded', function() {
             color = '#fbbf24'; // 黄色
             textColor = '#000';
         }
+        let title = info.event.extendedProps.desc ? info.event.extendedProps.desc : (info.event.url ? info.event.url : "wp");
         // 鼠标悬浮显示完整标题
-        info.el.title = info.event.title + " wp";
+        info.el.title = title;
         info.el.style.backgroundColor = color;
         info.el.style.borderColor = color;
         info.el.style.color = textColor;
