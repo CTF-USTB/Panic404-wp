@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
       center: 'title',
       right: 'dayGridMonth'
     },
-    events: 'data/schedule.json', // 加载 WP JSON 数据
+    events: '/data/schedule.json', // 加载 WP JSON 数据
     eventContent: function(arg) {
       // 自定义事件显示样式
       let color = '#fff'; // 默认白色
