@@ -5,18 +5,18 @@ document.addEventListener('DOMContentLoaded', function() {
     initialView: 'dayGridMonth',
     validRange: function(nowDate) {
     let endDate = new Date();
-    endDate.setDate(endDate.getDate() + 6);
+    endDate.setDate(endDate.getDate() + 7);
     return {
         start: '2025-09-01',
         end: endDate
-    }; // 可预览未来6天的事件
+    }; // 可预览未来7天的事件
     },
     headerToolbar: {
       left: 'prev,next today',
       center: 'title',
       right: 'dayGridMonth'
     },
-    events: './data/schedule.json', // 加载 WP JSON 数据
+    events: './data/calendar.json', // 加载 WP JSON 数据
     eventContent: function(arg) {
       // 自定义事件显示样式
       let color = '#fff'; // 默认白色
@@ -29,44 +29,50 @@ document.addEventListener('DOMContentLoaded', function() {
       return { html: `<div style="color:${color}; font-weight:bold">${arg.event.title + " " + type}</div>` };
     },
     eventDidMount: function(info) {
-        // 根据状态修改整个事件块样式
-        let status = info.event.extendedProps.status;
-        let color, textColor;
-        if(!info.event.extendedProps.desc) {
-            if (status === 'done') {
-                // color = '#4CAF50';
-                color = '#4ecd7cff';    // 亮绿色
-                textColor = '#fff';
-            } else if (status === 'pending') {
-                const tomorrow = new Date();
-                tomorrow.setHours(0, 0, 0, 0);
-                tomorrow.setDate(tomorrow.getDate() + 1);
-                if (info.event.start < tomorrow) {
-                    color = '#dc2626';    // 暗红
-                    textColor = '#fff';
-                } else {
-                    color = '#9ca3af';    // 灰色
-                    textColor = '#fff';
-                }
-            } else {
-                color = '#9ca3af';    // 灰色
-                textColor = '#fff';
-            }
-        } else {
-            // 如果有 type 字段，表示是节假日或特殊事件
-            color = '#fbbf24'; // 黄色
-            textColor = '#000';
-        }
-        let title = info.event.extendedProps.desc ? info.event.extendedProps.desc : (info.event.url ? info.event.url : "wp");
-        // 鼠标悬浮显示完整标题
-        info.el.title = title;
-        info.el.style.backgroundColor = color;
-        info.el.style.borderColor = color;
-        info.el.style.color = textColor;
-        info.el.style.borderRadius = '4px';
-        info.el.style.fontWeight = 'bold';
-        info.el.style.padding = '2px 4px';
-        info.el.style.cursor = 'pointer'; // 提示可点击
+      let status = info.event.extendedProps.status;
+      let color, textColor;
+
+      // 从 url 中提取方向
+      let url = info.event.url || "";
+      let direction = url.split("/")[0].toLowerCase(); // web/misc/pwn/...
+
+      // 定义方向对应的颜色
+      const directionColors = {
+          web:    '#3498db', // 蓝
+          misc:   '#9b59b6', // 紫
+          pwn:    '#e74c3c', // 红
+          reverse:'#27ae60', // 绿
+          crypto: '#34495e', // 深灰蓝
+          ai:     '#e67e22'  // 橙
+      };
+
+      if(!info.event.extendedProps.desc) {
+        if (directionColors[direction]) {
+              // 如果有方向，就按方向颜色
+              color = directionColors[direction];
+              // 让文字颜色自动根据背景深浅决定
+              textColor = (direction === 'crypto') ? '#000' : '#fff';
+          } else {
+              // 默认灰
+              color = '#9ca3af';
+              textColor = '#fff';
+          }
+      } else {
+          // 有 desc = 特殊事件
+          color = '#f1c40f'; // 亮黄色（特殊事件）
+          textColor = '#fff';
+      }
+
+      let title = info.event.extendedProps.desc ? info.event.extendedProps.desc : (info.event.url ? info.event.url : "wp");
+      // 鼠标悬浮显示完整标题
+      info.el.title = title;
+      info.el.style.backgroundColor = color;
+      info.el.style.borderColor = color;
+      info.el.style.color = textColor;
+      info.el.style.borderRadius = '4px';
+      info.el.style.fontWeight = 'bold';
+      info.el.style.padding = '2px 4px';
+      info.el.style.cursor = 'pointer';
     },
     // 点击事件跳转
     eventClick: function(info) {
