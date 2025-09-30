@@ -993,6 +993,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#后续提交pr的一般流程" class="md-nav__link">
+    <span class="md-ellipsis">
+      后续提交PR的一般流程
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1046,6 +1055,15 @@
   <a href="#fork--pull-request" class="md-nav__link">
     <span class="md-ellipsis">
       Fork &amp; Pull request
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#后续提交pr的一般流程" class="md-nav__link">
+    <span class="md-ellipsis">
+      后续提交PR的一般流程
     </span>
   </a>
   
@@ -1156,7 +1174,20 @@ git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </sp
 <span class="c1"># 推送到自己的 Fork</span>
 git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span><span class="o">[</span>username<span class="o">]</span>-wp
 </code></pre></div></td></tr></table></div></p>
-<p>最后在Github上提交 <strong>Pull request（PR）</strong>，请求原仓库的审核者 <strong>pull</strong> 你的分支，等待审核或修改意见</p>
+<p>最后在Github上的该Fork仓库中提交 <strong>Pull request（PR）</strong>，请求原仓库的审核者 <strong>pull</strong> 你的分支，然后等待审核或修改意见</p>
+<h2 id="后续提交pr的一般流程">后续提交PR的一般流程<a class="headerlink" href="#后续提交pr的一般流程" title="Permanent link"></a></h2>
+<p>进入本地仓库（<em>此时位于之前新建的分支上</em>），拉取上游仓库更新本地fork仓库（<em>确保upstream地址在上述过程中配置完成</em>）</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>pull<span class="w"> </span>--rebase<span class="w"> </span>upstream<span class="w"> </span>main
+</code></pre></div></td></tr></table></div>
+<p>添加、提交编辑好的wp</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add my writeup&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>将分支推送到自己的 Fork仓库</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>push<span class="w"> </span>--force-with-lease<span class="w"> </span>origin<span class="w"> </span><span class="o">[</span>username<span class="o">]</span>-wp
+</code></pre></div></td></tr></table></div>
+<p>登入Github对应Fork仓库提交PR，等待审核或修改意见</p>
 
 
 
