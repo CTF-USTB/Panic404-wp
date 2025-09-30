@@ -16,7 +16,7 @@
         <link rel="prev" href="../unfinish/">
       
       
-        <link rel="next" href="../../%E5%B8%AE%E5%8A%A9/git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E4%BD%9C/">
+        <link rel="next" href="../../%E5%B8%AE%E5%8A%A9/Writeup%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/">
       
       
       <link rel="icon" href="../../favicon.ico">
@@ -228,7 +228,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../%E5%B8%AE%E5%8A%A9/git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E4%BD%9C/" class="md-tabs__link">
+        <a href="../../%E5%B8%AE%E5%8A%A9/Writeup%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/" class="md-tabs__link">
           
   
   
@@ -624,6 +624,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../%E5%B8%AE%E5%8A%A9/Writeup%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Writeup编写规范
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../%E5%B8%AE%E5%8A%A9/git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E4%BD%9C/" class="md-nav__link">
         
   
@@ -833,6 +856,14 @@
 <p>江苏工匠杯</p>
 </blockquote>
 <p><img alt="" src="../images/unseping/topic.png" /></p>
+<hr />
+<p><code>waf()</code> 函数过滤了 <code>|</code>、<code>&amp;</code>、<code>;</code>、<code>[sapce]</code>、<code>/</code>、<code>cat</code>、<code>flag</code>、<code>tac</code>、<code>php</code>、<code>ls</code></p>
+<p>shell中可以使用 <code>l''s</code> 绕过 <code>ls</code>，使用 <code>${IFS}</code> 绕过空格</p>
+<p>或者直接用下面字符串实现任意命令执行，其中 <code>$payload</code> 为八进制或十六进制编码过后的命令串</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="s1">&#39;$(printf${IFS}&quot;&#39;</span><span class="o">.</span><span class="nv">$payload</span><span class="o">.</span><span class="s1">&#39;&quot;)&#39;</span>
+</code></pre></div></td></tr></table></div>
 <hr />
 <h2 id="highlight_file">highlight_file()<a class="headerlink" href="#highlight_file" title="Permanent link"></a></h2>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
