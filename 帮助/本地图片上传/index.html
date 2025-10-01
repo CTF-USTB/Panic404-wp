@@ -1173,24 +1173,38 @@
 <h3 id="typora-偏好设置">Typora 偏好设置<a class="headerlink" href="#typora-偏好设置" title="Permanent link"></a></h3>
 <p>文件 -&gt; 偏好设置 -&gt; 图片</p>
 <p>偏好设置参考如下，插入图片时保持默认选项 <code>无特殊操作</code>，在最后writeup撰写完成后统一上传图片，尽量保证图片仓库的整洁。</p>
-<p><img alt="屏幕截图 2025-10-01 151531" src="https://raw.githubusercontent.com/CTF-USTB/Panic404-wp-images/main/images/20251001162947840.png" /></p>
+<p><img alt="屏幕截图 2025-10-01 151531" src="https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251001162947840.png" /></p>
 <p>重点关注图片<strong>上传服务</strong>设置，选择 <code>PicGo(app)</code> 服务，点击下载后安装到任意文件夹下，配置好 PicGo路径选项</p>
 <h3 id="配置-picgo-app">配置 PicGo (app)<a class="headerlink" href="#配置-picgo-app" title="Permanent link"></a></h3>
 <p>进入Gtihub图床配置</p>
-<p><img alt="屏幕截图 2025-10-01 155330" src="https://raw.githubusercontent.com/CTF-USTB/Panic404-wp-images/main/images/20251001162947842.png" /></p>
+<p><img alt="屏幕截图 2025-10-01 155330" src="https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251001162947842.png" /></p>
 <p>配置如图，token请关注内部消息</p>
-<p><img alt="屏幕截图 2025-10-01 150145" src="https://raw.githubusercontent.com/CTF-USTB/Panic404-wp-images/main/images/20251001162947843.png" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># 复制至对应位置</span>
+Panic404-wp-images
+CTF-USTB/Panic404-wp-images
+main
+*<span class="w"> </span><span class="c1"># 替换为真实token</span>
+images/
+https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images
+</code></pre></div></td></tr></table></div>
+<p><img alt="屏幕截图 2025-10-01 191105" src="https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251001191631434.png" /></p>
 <p>点击确定后设置为默认图床</p>
 <p>然后修改PicGo设置，开启 <code>时间戳重命名</code> 选项</p>
-<p><img alt="屏幕截图 2025-10-01 160508" src="https://raw.githubusercontent.com/CTF-USTB/Panic404-wp-images/main/images/20251001162947845.png" /></p>
+<p><img alt="屏幕截图 2025-10-01 160508" src="https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251001162947845.png" /></p>
 <h3 id="测试图片上传">测试图片上传<a class="headerlink" href="#测试图片上传" title="Permanent link"></a></h3>
 <p>回到Typora，文件 -&gt; 偏好设置 -&gt; 图片</p>
 <p>点击<strong>上传服务设定</strong>中的 <code>验证图片上传选项</code>，<mark>注意要关闭 Watt Toolkit (steam++)，否则会因为网络问题上传失败</mark></p>
-<p><img alt="屏幕截图 2025-10-01 150238" src="https://raw.githubusercontent.com/CTF-USTB/Panic404-wp-images/main/images/20251001162947846.png" /></p>
+<p><img alt="屏幕截图 2025-10-01 150238" src="https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251001162947846.png" /></p>
 <h2 id="使用">使用<a class="headerlink" href="#使用" title="Permanent link"></a></h2>
 <p>使用Typora编写完Writeup后，点击 格式 -&gt; 图像 -&gt; 上传所有本地图片</p>
 <p>这会将你本篇md文件引用的所有本地图片都上传至图床</p>
-<p><img alt="屏幕截图 2025-10-01 152909" src="https://raw.githubusercontent.com/CTF-USTB/Panic404-wp-images/main/images/20251001162947847.png" /></p>
+<p><img alt="屏幕截图 2025-10-01 152909" src="https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251001162947847.png" /></p>
 <p>然后就可以将单独的md文件上传至Writeup仓库，而不用再上传图片了</p>
 
 
