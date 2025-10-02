@@ -39,7 +39,9 @@ git pull origin main
 
 当你没有对远程仓库的写入权限时，可以使用 **Fork**，在你账户下复制一个远程仓库，生成独立仓库，然后你可以对自己账户下的这个远程仓库进行上述的基本操作
 
-首先 **clone**
+![屏幕截图 2025-10-02 153002](https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251002153344188.png)
+
+Fork完成后首先 **clone**
 ```sh
 # fork时默认仓库名为Panic404-wp
 git clone https://github.com/你的用户名/Panic404-wp.git
