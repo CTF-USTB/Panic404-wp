@@ -1,4 +1,4 @@
-# BJDCTF2020![题目](C:\Users\lenovo\Desktop\ab4db692-26e1-4474-9ede-d5a9d34d9a18.png)
+# BJDCTF2020![题目](https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251009233339999.png)
 
 题目给了一个自定义的base64字典，与标准字典不同。猜测应该是替换加密，可以写一个脚本，把密文中的每个字符替换回标准 Base64 字符
 
@@ -30,7 +30,7 @@ print(flag)
 
 运行脚本：
 
-![输出](C:\Users\lenovo\Desktop\111.png)
+![输出](https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251009233340001.png)
 
 根据提交提示，将BJD替换为flag即可。
 
@@ -39,4 +39,3 @@ print(flag)
 <p style="text-align: right;">
 by. cinansu
 </p>
-
