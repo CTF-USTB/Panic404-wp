@@ -42,16 +42,8 @@ jobs:
 
       - name: Commit & Push
         run: |
-          # 只有有本地改动才 stash
-          if ! git diff --quiet; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git stash
-            git pull --rebase https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} main
-            git stash pop
-            git add docs/data/calendar.json
-            git commit -m "Update calendar from push"
-            git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:main
-          else
-            echo "No changes"
-          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/calendar.json
+          git diff --cached --quiet || git commit -m "Update calendar from PR merge"
+          git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }} HEAD:main
