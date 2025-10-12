@@ -1,5 +1,3 @@
-> 网鼎杯
-
 发现注册页
 
 ![](https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251001152927560.png)
