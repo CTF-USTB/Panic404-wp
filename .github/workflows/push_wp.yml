@@ -1,7 +1,8 @@
-name: Update calendar on push
+name: Update calendar on PR Merged
 
 on:
-  push:
+  pull_request:
+    types: [closed]
     paths:
       - 'docs/**'
       
@@ -13,8 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # 拉取完整历史，保证可以用 HEAD~1 等引用
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -22,16 +21,24 @@ jobs:
           python-version: '3.x'
       - name: Get added md files
         run: |
-          git fetch origin main
-          # 获取本次 push 中所有新增文件（A = Added）
-          FILES=$(git diff --name-only --diff-filter=A ${{ github.event.before }} ${{ github.sha }} | grep '^docs/.*\.md$' || true)
+          id: get_files
+        run: |
+          echo "Fetching changed files from PR #${{ github.event.pull_request.number }}"
+
+          # 调用 GitHub API 获取 PR 文件列表
+          FILES=$(curl -sSL "${{ github.event.pull_request.url }}/files" \
+          -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+          -H "Accept: application/vnd.github+json" \
+          | jq -r '.[] | select(.status == "added") | .filename' \
+          | grep '^docs/.*\.md$' || true)
+
           # 转成 JSON 数组
           FILES_JSON=$(jq -R -s -c 'split("\n")[:-1]' <<< "$FILES")
           echo "COMMIT_FILES=$FILES_JSON" >> $GITHUB_ENV
       - name: Update schedule JSON
         env:
-          COMMITTER_NAME: ${{ github.actor }}
-          COMMIT_URL: ${{ github.event.head_commit.url }}
+          COMMITTER_NAME: ${{ github.event.pull_request.user.login }}
+          COMMIT_URL: ${{ github.event.pull_request.html_url }}
         run: |
           python scripts/update_calendar_on_push.py
 
