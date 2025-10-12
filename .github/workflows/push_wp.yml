@@ -21,8 +21,6 @@ jobs:
           python-version: '3.x'
       - name: Get added md files
         run: |
-          id: get_files
-        run: |
           echo "Fetching changed files from PR #${{ github.event.pull_request.number }}"
 
           # 调用 GitHub API 获取 PR 文件列表
