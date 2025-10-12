@@ -5,6 +5,7 @@ on:
     types: [closed]
     paths:
       - 'docs/**'
+  workflow_dispatch: # 手动触发
       
 permissions:
   contents: write
