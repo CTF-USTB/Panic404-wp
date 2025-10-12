@@ -1,5 +1,3 @@
-> 江苏工匠杯
-
 ![](https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251001153644034.png)
 
 ___
