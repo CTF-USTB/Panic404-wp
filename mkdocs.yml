@@ -15,7 +15,7 @@ copyright: 'Copyright &copy; 2025 Panic404 Team'
 # Theme
 theme:
   name: material
-  # custom_dir: 'mkdocs-material/material/templates'
+  custom_dir: 'docs/assets/overrides'
   static_templates:
     - 404.html
   language: 'zh'
@@ -51,9 +51,10 @@ theme:
     code: 'Fira Mono'
 
 plugins:
-- toggle-sidebar:
-    theme: material
-    toggle_button: all
+  - toggle-sidebar:
+      theme: material
+      toggle_button: all
+  - search
 
 extra_css:
   - https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.9/index.global.min.css
@@ -62,7 +63,7 @@ extra_css:
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.9/index.global.min.js
   - https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.9/index.global.min.js
-  
+
   # 日历渲染
   - assets/js/calendar.js
 
