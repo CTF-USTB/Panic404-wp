@@ -62,7 +62,13 @@ extra_css:
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.9/index.global.min.js
   - https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.9/index.global.min.js
-  - assets/js/calendar.js   # 自己写的初始化代码
+  
+  # 日历渲染
+  - assets/js/calendar.js
+
+  # MathJax
+  - assets/js/mathjax-config.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
   # Extensions
 markdown_extensions:
@@ -74,7 +80,6 @@ markdown_extensions:
   - meta
   - toc:
       permalink: ""
-      slugify: !!python/name:pymdownx.slugs.uslugify
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.caret

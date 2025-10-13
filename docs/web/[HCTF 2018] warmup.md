@@ -103,7 +103,7 @@ file=source.php?/../../../../ffffllllaaaagggg
 
 其中 `include` 在linux下会将 `source.php?` 视为一个目录（因为linux下目录命名可含 `'?'`，但windows下不行，所以无法在windows下复现，因为 `include` 底层调用的是操作系统api来检查文件存在性的），`source.php?/../` 等效于 `./` 
 
-注意，这是 `include` 的路径规约（clear/normalize）特性，详见 [include路径解析](../[Article] php_include_path_analysis)，而你如果在shell中访问 `source.php?/../` 这样一段路径，操作系统会先检查 `source.php?` 目录是否存在，若不存在会直接报错
+注意，这是 `include` 的路径规约（clear/normalize）特性，详见 [include路径解析]([Article] php_include_path_analysis.md)，而你如果在shell中访问 `source.php?/../` 这样一段路径，操作系统会先检查 `source.php?` 目录是否存在，若不存在会直接报错
 
 ___
 
