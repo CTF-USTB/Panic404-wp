@@ -82,4 +82,4 @@ with open(schedule_file, 'w', encoding='utf-8') as f:
             f.write(',\n')
         else:
             f.write('\n')
-    f.write(']')
+    f.write(']\n')
