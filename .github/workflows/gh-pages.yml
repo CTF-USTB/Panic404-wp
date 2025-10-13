@@ -2,7 +2,7 @@ name: Deploy MkDocs
 
 on:
   workflow_run:
-    workflows: ["Update calendar on push"]  # 依赖的 workflow 名称
+    workflows: ["Update calendar on PR Merged"]  # 依赖的 workflow 名称
     types:
       - completed  # 或 success，如果只在成功时触发
   workflow_dispatch: # 手动触发
