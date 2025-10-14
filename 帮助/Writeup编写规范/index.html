@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#要求注意事项" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -151,6 +151,46 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
     
     
       <div class="md-header__source">
@@ -1162,7 +1202,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#要求注意事项" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       要求&amp;注意事项
     </span>
@@ -1171,9 +1211,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#推荐的md编辑器" class="md-nav__link">
+  <a href="#md" class="md-nav__link">
     <span class="md-ellipsis">
-      推荐的md编辑器
+      推荐的 md 编辑器
     </span>
   </a>
   
@@ -1266,7 +1306,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#要求注意事项" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       要求&amp;注意事项
     </span>
@@ -1275,9 +1315,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#推荐的md编辑器" class="md-nav__link">
+  <a href="#md" class="md-nav__link">
     <span class="md-ellipsis">
-      推荐的md编辑器
+      推荐的 md 编辑器
     </span>
   </a>
   
@@ -1295,6 +1335,7 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+    
                   
 
 
@@ -1312,34 +1353,31 @@
 <blockquote>
 <p>Markdown 是一种轻量级标记语言，用简单直观的符号就能实现标题、列表、链接、代码等排版效果，它语法易学、跨平台通用、文件是纯文本便于版本管理，并且能方便地转换成 HTML、PDF 等多种格式，因此既能让作者专注内容创作，又能快速得到美观、结构清晰的文档。</p>
 </blockquote>
-<h2 id="要求注意事项">要求&amp;注意事项<a class="headerlink" href="#要求注意事项" title="Permanent link"></a></h2>
+<h2 id="_1">要求&amp;注意事项<a class="headerlink" href="#_1" title="Permanent link"></a></h2>
 <ol>
 <li>
-<p>该静态网站使用mkdocs工具生成，Writeup<strong>必须使用md文件编写</strong>，关于markdown语法可以自行搜索学习，五分钟左右便可掌握基本语法，只需会<strong>多级标题、图片链接、多级列表</strong>即可。</p>
+<p>该静态网站使用 mkdocs 工具生成，Writeup<strong>必须使用 md 文件编写</strong>，关于 markdown 语法可以自行搜索学习，五分钟左右便可掌握基本语法，只需会<strong>多级标题、图片链接、多级列表</strong>即可。</p>
 </li>
 <li>
-<p>编写的md文件需要通过 <code>lint-md</code> 进行语法校验，该步骤未来会考虑加入github workflow自动审查，目前你只需要保证你的md编辑器能正确渲染就行。</p>
+<p>编写的 md 文件需要通过 <code>lint-md</code> 进行语法校验，该步骤未来会考虑加入 github workflow 自动审查，目前你只需要<strong>保证你的 md 编辑器能正确渲染</strong>就行。</p>
 </li>
 <li>
-<p>编写的wp最后需要<strong>加上署名</strong>，即在文件的最后另起一行粘贴如下代码，其中[username]替换为你的github用户名，实现效果可参考已上传wp <a href="../../web/unfinish">unfinish</a>末尾，未来也考虑使用github workflow进行自动化署名。
-   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;p style=&quot;text-align: right;&quot;&gt;
-by. [username]
-&lt;/p&gt;
-</code></pre></div></td></tr></table></div></p>
+<p><strong>无须添加署名</strong>，网站会根据你的 github 用户名进行自动署名。</p>
 </li>
 <li>
-<p>注意md文件并不内嵌图片，因此图片链接推荐使用网络图片或将本地图片上传至图床（记得<strong>脱敏！！！</strong>），上传至图床过程可参考文档 <a href="../本地图片上传">本地图片上传</a></p>
+<p>注意 md 文件并不内嵌图片，因此图片链接推荐使用网络图片或<strong>将本地图片上传至图床</strong>（记得<strong>脱敏！！！</strong>），上传至图床过程可参考文档 <a href="../%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/">本地图片上传</a></p>
 </li>
 <li>
-<p>静态网站的标题默认为md文件名，<strong>文件名需要为题目名称</strong>（参考已上传wp），wp中不要使用一级标题，会覆盖静态网站默认标题</p>
+<p>静态网站的标题默认为 md 文件名，<strong>文件名需要为题目名称</strong>（参考已上传 wp），wp 中尽量不要使用一级标题，会覆盖静态网站默认标题</p>
 </li>
 <li>
-<p>提交pr前可在仓库下使用 <code>mkdocs serve</code> 指令预览，出现报错可复制询问LLM</p>
+<p>添加的 md 文件需要放在<strong>docs目录</strong>下的对应分类中</p>
+</li>
+<li>
+<p>提交 pr 前可在仓库下使用 <code>mkdocs serve</code> 指令预览网页效果，出现报错可复制询问 LLM 测试</p>
 </li>
 </ol>
-<h2 id="推荐的md编辑器">推荐的md编辑器<a class="headerlink" href="#推荐的md编辑器" title="Permanent link"></a></h2>
+<h2 id="md">推荐的 md 编辑器<a class="headerlink" href="#md" title="Permanent link"></a></h2>
 <ul>
 <li>
 <p>Typora（可自行搜索免费版教程）</p>
@@ -1347,7 +1385,7 @@ by. [username]
 <li>
 <p>Obsidian （注意其独有的图片链接格式）</p>
 </li>
-<li>VsCode + markdown插件</li>
+<li>VsCode + markdown 插件</li>
 </ul>
 
 
@@ -1361,7 +1399,60 @@ by. [username]
 
 
 
-                
+                  
+
+    
+    
+    <div id="giscus-container"></div>
+    <script src="https://giscus.app/client.js"
+        data-repo="CTF-USTB/Panic404-wp"
+        data-repo-id="R_kgDOPyVijQ"
+        data-category="Comments"
+        data-category-id="DIC_kwDOPyVijc4CwlH4"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+    </script>
+    <script>
+    function updateGiscusTheme(theme) {
+      const iframe = document.querySelector('iframe.giscus-frame');
+      if (!iframe) return;
+      iframe.contentWindow.postMessage(
+        {
+          giscus: { setConfig: { theme: theme } }
+        },
+        'https://giscus.app'
+      );
+    }
+
+    function setInitialGiscusTheme() {
+      const darkRadio = document.querySelector('input[data-md-color-scheme="slate"]');
+      if (darkRadio && darkRadio.checked) updateGiscusTheme('dark');
+      else updateGiscusTheme('light');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // 初始化
+      setInitialGiscusTheme();
+
+      // 直接监听两个主题切换按钮点击事件
+      const lightBtn = document.querySelector('label[for="__palette_0"]');
+      const darkBtn  = document.querySelector('label[for="__palette_1"]');
+
+      if (lightBtn && darkBtn) {
+        lightBtn.addEventListener('click', () => updateGiscusTheme('light'));
+        darkBtn.addEventListener('click', () => updateGiscusTheme('dark'));
+      }
+    });
+    </script>
+    
+
               </article>
             </div>
           
@@ -1411,6 +1502,10 @@ by. [username]
         <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.9/index.global.min.js"></script>
       
         <script src="../../assets/js/calendar.js"></script>
+      
+        <script src="../../assets/js/mathjax-config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

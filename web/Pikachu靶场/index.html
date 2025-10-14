@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pikachu靶场" class="md-skip">
+        <a href="#pikachu" class="md-skip">
           跳转至
         </a>
       
@@ -151,6 +151,46 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
     
     
       <div class="md-header__source">
@@ -911,7 +951,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#暴力破解" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       暴力破解
     </span>
@@ -921,7 +961,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#基于表单的暴力破解" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       基于表单的暴力破解
     </span>
@@ -930,7 +970,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#验证码绕过onserver" class="md-nav__link">
+  <a href="#onserver" class="md-nav__link">
     <span class="md-ellipsis">
       验证码绕过(onserver）
     </span>
@@ -939,7 +979,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#验证码绕过onclient" class="md-nav__link">
+  <a href="#onclient" class="md-nav__link">
     <span class="md-ellipsis">
       验证码绕过(onclient)
     </span>
@@ -948,7 +988,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#token防爆破" class="md-nav__link">
+  <a href="#token" class="md-nav__link">
     <span class="md-ellipsis">
       token防爆破?
     </span>
@@ -972,7 +1012,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#反射型xssget" class="md-nav__link">
+  <a href="#xssget" class="md-nav__link">
     <span class="md-ellipsis">
       反射型XSS(get）
     </span>
@@ -981,7 +1021,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#反射型xsspost" class="md-nav__link">
+  <a href="#xsspost" class="md-nav__link">
     <span class="md-ellipsis">
       反射型XSS(post)
     </span>
@@ -990,7 +1030,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#存储型xss" class="md-nav__link">
+  <a href="#xss" class="md-nav__link">
     <span class="md-ellipsis">
       存储型XSS
     </span>
@@ -999,7 +1039,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dom型xss" class="md-nav__link">
+  <a href="#domxss" class="md-nav__link">
     <span class="md-ellipsis">
       DOM型XSS
     </span>
@@ -1008,7 +1048,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dom型xss-x" class="md-nav__link">
+  <a href="#domxss-x" class="md-nav__link">
     <span class="md-ellipsis">
       DOM型XSS-X
     </span>
@@ -1017,7 +1057,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#xss之盲打" class="md-nav__link">
+  <a href="#xss_1" class="md-nav__link">
     <span class="md-ellipsis">
       XSS之盲打
     </span>
@@ -1026,7 +1066,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#xss之过滤" class="md-nav__link">
+  <a href="#xss_2" class="md-nav__link">
     <span class="md-ellipsis">
       XSS之过滤
     </span>
@@ -1035,7 +1075,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#xss之htmlspecialchars" class="md-nav__link">
+  <a href="#xsshtmlspecialchars" class="md-nav__link">
     <span class="md-ellipsis">
       XSS之htmlspecialchars
     </span>
@@ -1044,7 +1084,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#xss之href输出" class="md-nav__link">
+  <a href="#xsshref" class="md-nav__link">
     <span class="md-ellipsis">
       XSS之href输出
     </span>
@@ -1053,7 +1093,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#xss之js输出" class="md-nav__link">
+  <a href="#xssjs" class="md-nav__link">
     <span class="md-ellipsis">
       XSS之js输出
     </span>
@@ -1260,7 +1300,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#水平越权" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       水平越权
     </span>
@@ -1269,7 +1309,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#垂直越权" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       垂直越权
     </span>
@@ -1283,7 +1323,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       ../../
     </span>
@@ -1293,7 +1333,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#目录遍历" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       目录遍历
     </span>
@@ -1307,7 +1347,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#敏感信息泄露" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       敏感信息泄露
     </span>
@@ -1331,7 +1371,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#php反序列化" class="md-nav__link">
+  <a href="#php" class="md-nav__link">
     <span class="md-ellipsis">
       PHP反序列化
     </span>
@@ -1350,7 +1390,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#xxe漏洞" class="md-nav__link">
+  <a href="#xxe_1" class="md-nav__link">
     <span class="md-ellipsis">
       XXE漏洞
     </span>
@@ -1364,7 +1404,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#url重定向" class="md-nav__link">
+  <a href="#url" class="md-nav__link">
     <span class="md-ellipsis">
       URL重定向
     </span>
@@ -1374,7 +1414,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#不安全的url跳转" class="md-nav__link">
+  <a href="#url_1" class="md-nav__link">
     <span class="md-ellipsis">
       不安全的URL跳转
     </span>
@@ -1764,7 +1804,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#暴力破解" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       暴力破解
     </span>
@@ -1774,7 +1814,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#基于表单的暴力破解" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       基于表单的暴力破解
     </span>
@@ -1783,7 +1823,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#验证码绕过onserver" class="md-nav__link">
+  <a href="#onserver" class="md-nav__link">
     <span class="md-ellipsis">
       验证码绕过(onserver）
     </span>
@@ -1792,7 +1832,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#验证码绕过onclient" class="md-nav__link">
+  <a href="#onclient" class="md-nav__link">
     <span class="md-ellipsis">
       验证码绕过(onclient)
     </span>
@@ -1801,7 +1841,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#token防爆破" class="md-nav__link">
+  <a href="#token" class="md-nav__link">
     <span class="md-ellipsis">
       token防爆破?
     </span>
@@ -1825,7 +1865,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#反射型xssget" class="md-nav__link">
+  <a href="#xssget" class="md-nav__link">
     <span class="md-ellipsis">
       反射型XSS(get）
     </span>
@@ -1834,7 +1874,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#反射型xsspost" class="md-nav__link">
+  <a href="#xsspost" class="md-nav__link">
     <span class="md-ellipsis">
       反射型XSS(post)
     </span>
@@ -1843,7 +1883,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#存储型xss" class="md-nav__link">
+  <a href="#xss" class="md-nav__link">
     <span class="md-ellipsis">
       存储型XSS
     </span>
@@ -1852,7 +1892,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dom型xss" class="md-nav__link">
+  <a href="#domxss" class="md-nav__link">
     <span class="md-ellipsis">
       DOM型XSS
     </span>
@@ -1861,7 +1901,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dom型xss-x" class="md-nav__link">
+  <a href="#domxss-x" class="md-nav__link">
     <span class="md-ellipsis">
       DOM型XSS-X
     </span>
@@ -1870,7 +1910,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#xss之盲打" class="md-nav__link">
+  <a href="#xss_1" class="md-nav__link">
     <span class="md-ellipsis">
       XSS之盲打
     </span>
@@ -1879,7 +1919,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#xss之过滤" class="md-nav__link">
+  <a href="#xss_2" class="md-nav__link">
     <span class="md-ellipsis">
       XSS之过滤
     </span>
@@ -1888,7 +1928,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#xss之htmlspecialchars" class="md-nav__link">
+  <a href="#xsshtmlspecialchars" class="md-nav__link">
     <span class="md-ellipsis">
       XSS之htmlspecialchars
     </span>
@@ -1897,7 +1937,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#xss之href输出" class="md-nav__link">
+  <a href="#xsshref" class="md-nav__link">
     <span class="md-ellipsis">
       XSS之href输出
     </span>
@@ -1906,7 +1946,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#xss之js输出" class="md-nav__link">
+  <a href="#xssjs" class="md-nav__link">
     <span class="md-ellipsis">
       XSS之js输出
     </span>
@@ -2113,7 +2153,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#水平越权" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       水平越权
     </span>
@@ -2122,7 +2162,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#垂直越权" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       垂直越权
     </span>
@@ -2136,7 +2176,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       ../../
     </span>
@@ -2146,7 +2186,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#目录遍历" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       目录遍历
     </span>
@@ -2160,7 +2200,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#敏感信息泄露" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       敏感信息泄露
     </span>
@@ -2184,7 +2224,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#php反序列化" class="md-nav__link">
+  <a href="#php" class="md-nav__link">
     <span class="md-ellipsis">
       PHP反序列化
     </span>
@@ -2203,7 +2243,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#xxe漏洞" class="md-nav__link">
+  <a href="#xxe_1" class="md-nav__link">
     <span class="md-ellipsis">
       XXE漏洞
     </span>
@@ -2217,7 +2257,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#url重定向" class="md-nav__link">
+  <a href="#url" class="md-nav__link">
     <span class="md-ellipsis">
       URL重定向
     </span>
@@ -2227,7 +2267,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#不安全的url跳转" class="md-nav__link">
+  <a href="#url_1" class="md-nav__link">
     <span class="md-ellipsis">
       不安全的URL跳转
     </span>
@@ -2285,6 +2325,7 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+    
                   
 
 
@@ -2297,15 +2338,15 @@
   
 
 
-<h1 id="pikachu靶场">Pikachu靶场<a class="headerlink" href="#pikachu靶场" title="Permanent link"></a></h1>
+<h1 id="pikachu">Pikachu靶场<a class="headerlink" href="#pikachu" title="Permanent link"></a></h1>
 <p>一直忘了刷这个靶场了，国庆结束想起来做一下，内容都非常基础所以写的比较简单，没有别的大佬的博客内容写的清晰。</p>
-<h2 id="暴力破解">暴力破解<a class="headerlink" href="#暴力破解" title="Permanent link"></a></h2>
-<h4 id="基于表单的暴力破解">基于表单的暴力破解<a class="headerlink" href="#基于表单的暴力破解" title="Permanent link"></a></h4>
+<h2 id="_1">暴力破解<a class="headerlink" href="#_1" title="Permanent link"></a></h2>
+<h4 id="_2">基于表单的暴力破解<a class="headerlink" href="#_2" title="Permanent link"></a></h4>
 <p>发现/vul/burteforce/bf_form.php是提交用的，post请求体里有<code>username=123&amp;password=123&amp;submit=Login</code>，所以扔到burpsuite里的intruder直接爆破即可</p>
 <p><img src="https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251010111933727.png" alt="image-20251008212015930" style="zoom: 17%;" /><img src="https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251010111933728.png" alt="image-20251008212121258" style="zoom:20%;" /></p>
-<h4 id="验证码绕过onserver">验证码绕过(onserver）<a class="headerlink" href="#验证码绕过onserver" title="Permanent link"></a></h4>
+<h4 id="onserver">验证码绕过(onserver）<a class="headerlink" href="#onserver" title="Permanent link"></a></h4>
 <p>输入验证码后发现验证码长期有效，所以内容应该同<strong>基于表单的暴力破解</strong>中的内容。</p>
-<h4 id="验证码绕过onclient">验证码绕过(onclient)<a class="headerlink" href="#验证码绕过onclient" title="Permanent link"></a></h4>
+<h4 id="onclient">验证码绕过(onclient)<a class="headerlink" href="#onclient" title="Permanent link"></a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2382,33 +2423,33 @@
 </code></pre></div></td></tr></table></div>
 <p>发现只有前端对验证码进行校验，所以可以直接忽略掉，内容也与<strong>基于表单的暴力破解</strong>中相同。</p>
 <p><img alt="image-20251008213358020" src="https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251010111933729.png" /></p>
-<h4 id="token防爆破">token防爆破?<a class="headerlink" href="#token防爆破" title="Permanent link"></a></h4>
+<h4 id="token">token防爆破?<a class="headerlink" href="#token" title="Permanent link"></a></h4>
 <p>抓包，发现请求体中多了一个token参数，所以又观察到在html表单中有一个隐藏的token，所以考虑用pitchfork，</p>
 <p>修改token的payload，点击设置里的<code>Grep—Extract</code>的添加（中文应该是叫检索-提取），然后点击获取回复，选中token的值复制，然后点击OK，之后输入初始值</p>
 <p><img src="https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251010111933731.png" alt="image-20251008231706988" style="zoom:20%;" /><img src="https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251010111933732.png" alt="image-20251008231751614" style="zoom:18%;" /></p>
 <p>启动即可</p>
 <h2 id="cross-site-scripting">Cross-Site Scripting<a class="headerlink" href="#cross-site-scripting" title="Permanent link"></a></h2>
 <p>XSS原理不解释，自行查找</p>
-<h4 id="反射型xssget">反射型XSS(get）<a class="headerlink" href="#反射型xssget" title="Permanent link"></a></h4>
+<h4 id="xssget">反射型XSS(get）<a class="headerlink" href="#xssget" title="Permanent link"></a></h4>
 <p><strong>src不收</strong></p>
 <p>先在前端修改输入框的最大长度限制，然后提交下方内容即可，这个是get传参</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span><span class="nx">alert</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span><span class="o">&lt;</span><span class="err">/script&gt;</span>
 </code></pre></div></td></tr></table></div>
-<h4 id="反射型xsspost">反射型XSS(post)<a class="headerlink" href="#反射型xsspost" title="Permanent link"></a></h4>
+<h4 id="xsspost">反射型XSS(post)<a class="headerlink" href="#xsspost" title="Permanent link"></a></h4>
 <p><strong>src不收</strong></p>
 <p>先用弱密码登录， admin/123456，之后里面有个submit，提交下方内容即可，这个是post传参</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span><span class="nx">alert</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span><span class="o">&lt;</span><span class="err">/script&gt;</span>
 </code></pre></div></td></tr></table></div>
-<h4 id="存储型xss">存储型XSS<a class="headerlink" href="#存储型xss" title="Permanent link"></a></h4>
+<h4 id="xss">存储型XSS<a class="headerlink" href="#xss" title="Permanent link"></a></h4>
 <p>好用，影响很严重。</p>
 <p>题目都没有waf，所以很好操作，可以用XSS钓鱼</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span><span class="nx">alert</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span><span class="o">&lt;</span><span class="err">/script&gt;</span>
 </code></pre></div></td></tr></table></div>
-<h4 id="dom型xss">DOM型XSS<a class="headerlink" href="#dom型xss" title="Permanent link"></a></h4>
+<h4 id="domxss">DOM型XSS<a class="headerlink" href="#domxss" title="Permanent link"></a></h4>
 <p>分析一下前端网页代码，可以发现输入框里的参数会被传递给A标签的href属性，输入下方内容提交，之后点击链接即可触发</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">javascript</span><span class="o">:</span><span class="nx">alert</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
-<h4 id="dom型xss-x">DOM型XSS-X<a class="headerlink" href="#dom型xss-x" title="Permanent link"></a></h4>
+<h4 id="domxss-x">DOM型XSS-X<a class="headerlink" href="#domxss-x" title="Permanent link"></a></h4>
 <p>DOM型XSS-X危害比DOM型XSS更大，可以在URL中体现</p>
 <p>看到源码</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -2438,24 +2479,24 @@
 <p>发现是<code>js</code>函数利用了<code>DOM</code>将字符串拼接并把值赋给a标签的href，然后输出一个<code>就让往事都随风,都随风吧</code>，所以我们先给href拼接上，然后再写个onclick1就能0你实现</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">#&#39;</span><span class="w"> </span><span class="nx">onclick</span><span class="o">=</span><span class="s2">&quot;alert(111)&quot;</span><span class="o">&gt;</span>
 </code></pre></div></td></tr></table></div>
-<h4 id="xss之盲打">XSS之盲打<a class="headerlink" href="#xss之盲打" title="Permanent link"></a></h4>
+<h4 id="xss_1">XSS之盲打<a class="headerlink" href="#xss_1" title="Permanent link"></a></h4>
 <p>只是因为显示不出来，但是后台能看见，如果盲打的话可以偷偷操控某些控件，<del>比如实现自动提交？</del></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span><span class="nx">alert</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span><span class="o">&lt;</span><span class="err">/script&gt;</span>
 </code></pre></div></td></tr></table></div>
-<h4 id="xss之过滤">XSS之过滤<a class="headerlink" href="#xss之过滤" title="Permanent link"></a></h4>
+<h4 id="xss_2">XSS之过滤<a class="headerlink" href="#xss_2" title="Permanent link"></a></h4>
 <p>换个标签即可，这个在<code>XSS cheatshee</code>t里很多</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">&lt;</span><span class="nx">img</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="nx">xx</span><span class="w"> </span><span class="nx">onerror</span><span class="o">=</span><span class="nx">alert</span><span class="p">(</span><span class="mf">1</span><span class="p">)</span><span class="o">&gt;</span>
 </code></pre></div></td></tr></table></div>
-<h4 id="xss之htmlspecialchars">XSS之htmlspecialchars<a class="headerlink" href="#xss之htmlspecialchars" title="Permanent link"></a></h4>
+<h4 id="xsshtmlspecialchars">XSS之htmlspecialchars<a class="headerlink" href="#xsshtmlspecialchars" title="Permanent link"></a></h4>
 <p><code>specialchars</code>这个函数会把单引号，双引号，尖括号过滤了，但是这个函数默认是不过滤单引号的，只有将quotestyle选项为ENT_QUOTES才会过滤单引号。</p>
 <p>发现正常的内容会被放到href里面，所以输入</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">javascript</span><span class="o">:</span><span class="nx">alert</span><span class="p">(</span><span class="mf">1</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<h4 id="xss之href输出">XSS之href输出<a class="headerlink" href="#xss之href输出" title="Permanent link"></a></h4>
+<h4 id="xsshref">XSS之href输出<a class="headerlink" href="#xsshref" title="Permanent link"></a></h4>
 <p>没懂和<strong>htmlspecialchars</strong>考点有什么区别</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">javascript</span><span class="o">:</span><span class="nx">alert</span><span class="p">(</span><span class="mf">1</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<h4 id="xss之js输出">XSS之js输出<a class="headerlink" href="#xss之js输出" title="Permanent link"></a></h4>
+<h4 id="xssjs">XSS之js输出<a class="headerlink" href="#xssjs" title="Permanent link"></a></h4>
 <p>要先把之前的script闭合</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">&#39;</span><span class="o">&lt;</span><span class="err">/script&gt;&lt;script&gt;alert(1);&lt;/script&gt;</span>
@@ -2530,21 +2571,21 @@
 <p><code>getimagesize()</code>函数会通过读取文件头部的几个字符串(即文件头), 来判断是否为正常图片的头部</p>
 <p>但是之前传的马已经考虑过了，所以内容不变</p>
 <h2 id="over-permission">Over Permission<a class="headerlink" href="#over-permission" title="Permanent link"></a></h2>
-<h4 id="水平越权">水平越权<a class="headerlink" href="#水平越权" title="Permanent link"></a></h4>
+<h4 id="_3">水平越权<a class="headerlink" href="#_3" title="Permanent link"></a></h4>
 <p>登陆上kobe的账号，点击查看个人信息，发现用的是get请求</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://node.hackhub.get-shell.com:55190/vul/overpermission/op1/op1_mem.php?username=kobe&amp;submit=点击查看个人信息
 </code></pre></div></td></tr></table></div>
 <p>这个时候只要把username改成其他用户即可水平越权</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://node.hackhub.get-shell.com:55190/vul/overpermission/op1/op1_mem.php?username=lucy&amp;submit=点击查看个人信息
 </code></pre></div></td></tr></table></div>
-<h4 id="垂直越权">垂直越权<a class="headerlink" href="#垂直越权" title="Permanent link"></a></h4>
+<h4 id="_4">垂直越权<a class="headerlink" href="#_4" title="Permanent link"></a></h4>
 <p>提示中有：<code>这里有两个用户admin/123456,pikachu/000000,admin是超级boss</code></p>
 <p>所以我们登上admin，然后正常搞到一个请求，之后再拿到pikachu账号的cookie：<code>5ff8a110e136bfab243a2fadb1521b84</code>，把cookie改一下进行发包</p>
 <p><img alt="image-20251009190422334" src="https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251010111933737.png" /></p>
 <p>发现修改成功</p>
 <p><img alt="image-20251009190437404" src="https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251010111933738.png" /></p>
-<h2 id="_1">../../<a class="headerlink" href="#_1" title="Permanent link"></a></h2>
-<h4 id="目录遍历">目录遍历<a class="headerlink" href="#目录遍历" title="Permanent link"></a></h4>
+<h2 id="_5">../../<a class="headerlink" href="#_5" title="Permanent link"></a></h2>
+<h4 id="_6">目录遍历<a class="headerlink" href="#_6" title="Permanent link"></a></h4>
 <p>知周所众，<code>../</code>可以退出一层目录，所以退出多层就能访问到根目录，从而实现目录遍历</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -2552,12 +2593,12 @@
 http://node.hackhub.get-shell.com:55190/vul/dir/dir_list.php?title=123
 http://node.hackhub.get-shell.com:55190/vul/dir/dir_list.php?title=../../../../../../../etc/passwd
 </code></pre></div></td></tr></table></div>
-<h2 id="敏感信息泄露">敏感信息泄露<a class="headerlink" href="#敏感信息泄露" title="Permanent link"></a></h2>
+<h2 id="_7">敏感信息泄露<a class="headerlink" href="#_7" title="Permanent link"></a></h2>
 <h4 id="icanseeyourabc">icanseeyourABC<a class="headerlink" href="#icanseeyourabc" title="Permanent link"></a></h4>
 <p>源代码里注释掉了</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">&lt;!-- 测试账号:lili/123456--&gt;</span>
 </code></pre></div></td></tr></table></div>
-<h2 id="php反序列化">PHP反序列化<a class="headerlink" href="#php反序列化" title="Permanent link"></a></h2>
+<h2 id="php">PHP反序列化<a class="headerlink" href="#php" title="Permanent link"></a></h2>
 <p>参考自https://<a href="http://www.cnblogs.com/henry666/p/16947270.html">www.cnblogs.com/henry666/p/16947270.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -2581,11 +2622,11 @@ http://node.hackhub.get-shell.com:55190/vul/dir/dir_list.php?title=../../../../.
 </code></pre></div></td></tr></table></div>
 <p>基础</p>
 <h2 id="xxe">XXE<a class="headerlink" href="#xxe" title="Permanent link"></a></h2>
-<h4 id="xxe漏洞">XXE漏洞<a class="headerlink" href="#xxe漏洞" title="Permanent link"></a></h4>
+<h4 id="xxe_1">XXE漏洞<a class="headerlink" href="#xxe_1" title="Permanent link"></a></h4>
 <p><a href="https://www.cnblogs.com/backlion/p/9302528.html">https://www.cnblogs.com/backlion/p/9302528.html</a></p>
 <p>用的是在线靶场，所以没有自己写flag在根目录导致读不了文件</p>
-<h2 id="url重定向">URL重定向<a class="headerlink" href="#url重定向" title="Permanent link"></a></h2>
-<h4 id="不安全的url跳转">不安全的URL跳转<a class="headerlink" href="#不安全的url跳转" title="Permanent link"></a></h4>
+<h2 id="url">URL重定向<a class="headerlink" href="#url" title="Permanent link"></a></h2>
+<h4 id="url_1">不安全的URL跳转<a class="headerlink" href="#url_1" title="Permanent link"></a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://3caf3f99-a318-4504-9a53-16a03b792b38.node5.buuoj.cn:81/vul/urlredirect/urlredirect.php?url=unsafere.php
 </code></pre></div></td></tr></table></div>
 <p>修改url参数即可实现跳转位置改变</p>
@@ -2599,7 +2640,7 @@ http://node.hackhub.get-shell.com:55190/vul/dir/dir_list.php?title=../../../../.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://3caf3f99-a318-4504-9a53-16a03b792b38.node5.buuoj.cn:81/vul/ssrf/ssrf_fgc.php?file=file:///etc/passwd
 </code></pre></div></td></tr></table></div>
 <p style="text-align: right;">
-by. Huaji
+by. HuajiHD
 </p>
 
 
@@ -2613,7 +2654,60 @@ by. Huaji
 
 
 
-                
+                  
+
+    
+    
+    <div id="giscus-container"></div>
+    <script src="https://giscus.app/client.js"
+        data-repo="CTF-USTB/Panic404-wp"
+        data-repo-id="R_kgDOPyVijQ"
+        data-category="Comments"
+        data-category-id="DIC_kwDOPyVijc4CwlH4"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+    </script>
+    <script>
+    function updateGiscusTheme(theme) {
+      const iframe = document.querySelector('iframe.giscus-frame');
+      if (!iframe) return;
+      iframe.contentWindow.postMessage(
+        {
+          giscus: { setConfig: { theme: theme } }
+        },
+        'https://giscus.app'
+      );
+    }
+
+    function setInitialGiscusTheme() {
+      const darkRadio = document.querySelector('input[data-md-color-scheme="slate"]');
+      if (darkRadio && darkRadio.checked) updateGiscusTheme('dark');
+      else updateGiscusTheme('light');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // 初始化
+      setInitialGiscusTheme();
+
+      // 直接监听两个主题切换按钮点击事件
+      const lightBtn = document.querySelector('label[for="__palette_0"]');
+      const darkBtn  = document.querySelector('label[for="__palette_1"]');
+
+      if (lightBtn && darkBtn) {
+        lightBtn.addEventListener('click', () => updateGiscusTheme('light'));
+        darkBtn.addEventListener('click', () => updateGiscusTheme('dark'));
+      }
+    });
+    </script>
+    
+
               </article>
             </div>
           
@@ -2663,6 +2757,10 @@ by. Huaji
         <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.9/index.global.min.js"></script>
       
         <script src="../../assets/js/calendar.js"></script>
+      
+        <script src="../../assets/js/mathjax-config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
