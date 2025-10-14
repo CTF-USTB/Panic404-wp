@@ -6,8 +6,8 @@ strict: false
 # Repository
 repo_name: 'CTF-USTB/Panic404-wp'
 repo_url: 'https://github.com/CTF-USTB/Panic404-wp'
-edit_uri: edit/main/docs/
-#edit_uri: 'https://'
+edit_uri_template: 'edit/main/docs/{path!q}'
+# edit_uri: edit/main/docs/
 
 # Copyright
 copyright: 'Copyright &copy; 2025 Panic404 Team'

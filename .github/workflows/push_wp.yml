@@ -37,10 +37,10 @@ jobs:
           echo "ADDED_FILES=$ADDED_FILES" >> $GITHUB_ENV
 
           # 提取重命名文件 (renamed)，包括旧文件名
-          RENAMED_PAIRS=$(echo "$FILES_JSON" | jq -c '[.[] | select(.status == "renamed") | {old:.previous_filename, new:.filename}]' || echo '[]')
+          RENAMED_PAIRS=$(echo "$FILES_JSON" | jq -c '[.[] | select(.status == "renamed") | select(.filename | test("^docs/.*\\.md$")) | {old:.previous_filename, new:.filename}]' || echo '[]')
           echo "RENAMED_PAIRS=$RENAMED_PAIRS" >> $GITHUB_ENV
 
-          echo "Added files: $ADDED_FILES_JSON"
+          echo "Added files: $ADDED_FILES"
           echo "Renamed files: $RENAMED_PAIRS"
 
       - name: Update schedule JSON
