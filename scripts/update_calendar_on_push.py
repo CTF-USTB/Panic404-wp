@@ -8,7 +8,7 @@ today = datetime.date.today().isoformat()
 # === 获取环境变量 ===
 committer = os.environ.get('COMMITTER_NAME', 'unknown')
 # 新增文件（added）
-files_env = os.environ.get('COMMIT_FILES', '[]')
+added_env = os.environ.get('ADDED_FILES', '[]')
 # 重命名文件（renamed）
 renamed_env = os.environ.get('RENAMED_PAIRS', '[]')
 
@@ -21,7 +21,7 @@ def parse_list(env_str):
         return []
 
 
-added_files = parse_list(files_env)
+added_files = parse_list(added_env)
 renamed_pairs = parse_list(renamed_env)
 
 # 只取 Markdown 文件

@@ -33,9 +33,8 @@ jobs:
           -H "Accept: application/vnd.github+json")
 
           # 提取新增文件（added）
-          ADDED_FILES=$(echo "$FILES_JSON" | jq -r '.[] | select(.status == "added") | .filename' | grep '^docs/.*\.md$' || true)
-          ADDED_FILES_JSON=$(jq -R -s -c 'split("\n")[:-1]' <<< "$ADDED_FILES")
-          echo "COMMIT_FILES=$ADDED_FILES_JSON" >> $GITHUB_ENV
+          ADDED_FILES=$(echo "$FILES_JSON" | jq -r '[.[] | select(.status=="added") | .filename | select(test("^docs/.*\\.md$"))]')
+          echo "ADDED_FILES=$ADDED_FILES" >> $GITHUB_ENV
 
           # 提取重命名文件 (renamed)，包括旧文件名
           RENAMED_PAIRS=$(echo "$FILES_JSON" | jq -c '[.[] | select(.status == "renamed") | {old:.previous_filename, new:.filename}]' || echo '[]')
@@ -45,6 +44,7 @@ jobs:
           echo "Renamed files: $RENAMED_PAIRS"
 
       - name: Update schedule JSON
+        if: ${{ env.ADDED_FILES != '[]' || env.RENAMED_PAIRS != '[]' }}
         env:
           COMMITTER_NAME: ${{ github.event.pull_request.user.login }}
           COMMIT_URL: ${{ github.event.pull_request.html_url }}
@@ -52,6 +52,7 @@ jobs:
           python scripts/update_calendar_on_push.py
 
       - name: Commit & Push
+        if: ${{ env.ADDED_FILES != '[]' || env.RENAMED_PAIRS != '[]' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
