@@ -1,79 +1,95 @@
-import json, os, datetime, ast
+import json
+import os
+import datetime
 
 schedule_file = 'docs/data/calendar.json'
 today = datetime.date.today().isoformat()
 
-# 取环境变量
+# === 获取环境变量 ===
 committer = os.environ.get('COMMITTER_NAME', 'unknown')
-
-# 获取本次 push 改动的文件列表（md 文件）
+# 新增文件（added）
 files_env = os.environ.get('COMMIT_FILES', '[]')
-try:
-    files_nested = json.loads(files_env)
-except Exception:
-    files_nested = []
-# 拉平成一维
-files = []
-for sub in files_nested:
-    if isinstance(sub, list):
-        files.extend(sub)
-    elif isinstance(sub, str):
-        files.append(sub)
+# 重命名文件（renamed）
+renamed_env = os.environ.get('RENAMED_PAIRS', '[]')
 
-# 只取 md 文件
-md_files = [f for f in files if f.endswith('.md')]
 
-def to_mkdocs_url(path):
-    # 去掉前导 docs/
+def parse_list(env_str):
+    """解析 JSON 数组为 Python 列表"""
+    try:
+        return json.loads(env_str)
+    except Exception:
+        return []
+
+
+added_files = parse_list(files_env)
+renamed_pairs = parse_list(renamed_env)
+
+# 只取 Markdown 文件
+added_md = [f for f in added_files if isinstance(f, str) and f.endswith('.md')]
+renamed_pairs = [p for p in renamed_pairs if isinstance(p, dict)
+                 and p.get('old', '').endswith('.md')
+                 and p.get('new', '').endswith('.md')]
+
+
+def to_mkdocs_url(path: str) -> str:
+    """将 docs/xxx.md 转为 mkdocs URL"""
     if path.startswith('docs/'):
         path = path[len('docs/'):]
-        # 去掉 .md 后缀
     if path.endswith('.md'):
         path = path[:-3]
     return path
 
-urls = [to_mkdocs_url(p) for p in md_files]
 
-# 读取 schedule
+# === 读取现有事件文件 ===
 if os.path.exists(schedule_file):
     with open(schedule_file, encoding='utf-8') as f:
         events = json.load(f)
 else:
     events = []
 
-# 先找当天该人的 pending 事件
-# pending_index = None
-# for idx, ev in enumerate(events):
-#     if ev.get('date') == today and ev.get('title') == committer and ev.get('status') == 'pending':
-#         pending_index = idx
-#         break
+# === 更新重命名文件 ===
+if renamed_pairs:
+    print(f"Processing renamed pairs: {renamed_pairs}")
+    for pair in renamed_pairs:
+        old_url = to_mkdocs_url(pair['old'])
+        new_url = to_mkdocs_url(pair['new'])
 
-# if pending_index is not None and urls:
-#     # 用第一条 md 文件更新现有事件
-#     events[pending_index]['status'] = 'done'
-#     events[pending_index]['url'] = urls[0]
-#     used = 1
-# else:
-#     used = 0
+        # 尝试在现有 events 中找到旧 URL
+        updated = False
+        for ev in events:
+            if ev.get('url') == old_url:
+                ev['url'] = new_url
+                # ev['date'] = today
+                # ev['title'] = committer + " (rename)"
+                updated = True
+                break
 
-used = 0
+        # 若旧 URL 不存在，则补充新事件
+        # 非预料情况
+        if not updated:
+            events.append({
+                'date': today,
+                'title': committer,
+                'desc': '',
+                'status': 'done',
+                'url': new_url
+            })
 
-# 对剩余的 md 文件新增事件
-for url in urls[used:]:
-    events.append({
-        'date': today,
-        'title': committer,
-        'desc': '',
-        'status': 'done',
-        'url': url
-    })
+# === 处理新增文件 ===
+if added_md:
+    print(f"Adding events for: {added_md}")
+    for path in added_md:
+        url = to_mkdocs_url(path)
+        events.append({
+            'date': today,
+            'title': committer,
+            'desc': '',
+            'status': 'done',
+            'url': url
+        })
 
-# 写回
+# === 写回 JSON（单行字典形式） ===
 os.makedirs(os.path.dirname(schedule_file), exist_ok=True)
-# with open(schedule_file, 'w', encoding='utf-8') as f:
-#     json.dump(events, f, ensure_ascii=False, indent=2)
-
-# 手动写，保证单个字典不换行，字典之间换行
 with open(schedule_file, 'w', encoding='utf-8') as f:
     f.write('[\n')
     for i, ev in enumerate(events):
@@ -83,3 +99,5 @@ with open(schedule_file, 'w', encoding='utf-8') as f:
         else:
             f.write('\n')
     f.write(']\n')
+
+print(f"Updated {len(events)} events in {schedule_file}")
