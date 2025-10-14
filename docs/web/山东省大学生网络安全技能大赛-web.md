@@ -163,7 +163,3 @@ if (preg_match("/flag|zip|base|read|zlib|rot|string|code/i",$data)){
 file_put_contents($data,file_get_contents($data));
 ```
 
-<p style="text-align: right;">
-by. Huaji
-</p>
-

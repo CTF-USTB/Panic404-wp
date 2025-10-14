@@ -108,7 +108,3 @@ file=source.php?/../../../../ffffllllaaaagggg
 ___
 
 
-
-<p style="text-align: right;">
-by. Spark0618
-</p>

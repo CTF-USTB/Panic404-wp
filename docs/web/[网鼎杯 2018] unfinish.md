@@ -57,6 +57,3 @@ inject_post()
 
 ![](https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251001152927562.png)
 
-<p style="text-align: right;">
-by. Spark0618
-</p>
