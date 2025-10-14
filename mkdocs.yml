@@ -55,6 +55,7 @@ plugins:
       theme: material
       toggle_button: all
   - search
+  - author_from_json
 
 extra_css:
   - https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.9/index.global.min.css
