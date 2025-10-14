@@ -34,8 +34,3 @@ print(flag)
 
 根据提交提示，将BJD替换为flag即可。
 
-
-
-<p style="text-align: right;">
-by. cinansu
-</p>

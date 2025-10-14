@@ -22,20 +22,28 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
+
       - name: Get added md files
         run: |
           echo "Fetching changed files from PR #${{ github.event.pull_request.number }}"
 
-          # 调用 GitHub API 获取 PR 文件列表
-          FILES=$(curl -sSL "${{ github.event.pull_request.url }}/files" \
+          # 获取 PR 文件列表
+          FILES_JSON=$(curl -sSL "${{ github.event.pull_request.url }}/files" \
           -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-          -H "Accept: application/vnd.github+json" \
-          | jq -r '.[] | select(.status == "added") | .filename' \
-          | grep '^docs/.*\.md$' || true)
+          -H "Accept: application/vnd.github+json")
 
-          # 转成 JSON 数组
-          FILES_JSON=$(jq -R -s -c 'split("\n")[:-1]' <<< "$FILES")
-          echo "COMMIT_FILES=$FILES_JSON" >> $GITHUB_ENV
+          # 提取新增文件（added）
+          ADDED_FILES=$(echo "$FILES_JSON" | jq -r '.[] | select(.status == "added") | .filename' | grep '^docs/.*\.md$' || true)
+          ADDED_FILES_JSON=$(jq -R -s -c 'split("\n")[:-1]' <<< "$ADDED_FILES")
+          echo "COMMIT_FILES=$ADDED_FILES_JSON" >> $GITHUB_ENV
+
+          # 提取重命名文件 (renamed)，包括旧文件名
+          RENAMED_PAIRS=$(echo "$FILES_JSON" | jq -c '[.[] | select(.status == "renamed") | {old:.previous_filename, new:.filename}]' || echo '[]')
+          echo "RENAMED_PAIRS=$RENAMED_PAIRS" >> $GITHUB_ENV
+
+          echo "Added files: $ADDED_FILES_JSON"
+          echo "Renamed files: $RENAMED_PAIRS"
+
       - name: Update schedule JSON
         env:
           COMMITTER_NAME: ${{ github.event.pull_request.user.login }}

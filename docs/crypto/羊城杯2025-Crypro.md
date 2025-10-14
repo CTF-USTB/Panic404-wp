@@ -296,4 +296,3 @@ m_bytes = m_int.to_bytes((n+7)//8, 'big')
 print(m_bytes)  # b"It'5_4_pr0bl3m_0f_L4ttice!_n0t_LFSR!!"
 ```
 
-<p style="text-align: right;"> by. Huaji </p> 

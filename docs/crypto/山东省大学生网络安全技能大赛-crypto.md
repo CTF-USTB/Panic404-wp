@@ -150,6 +150,3 @@ if __name__ == '__main__':
 
 ### 
 
-<p style="text-align: right;">
-by. Huaji
-</p>

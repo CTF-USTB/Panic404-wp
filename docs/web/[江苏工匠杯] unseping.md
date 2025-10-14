@@ -147,6 +147,3 @@ args
 
 返回回调函数的结果。如果出错的话就返回 `false`
 
-<p style="text-align: right;">
-by. Spark0618
-</p>

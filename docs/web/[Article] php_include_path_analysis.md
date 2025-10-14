@@ -362,9 +362,4 @@ if (!start && !j) {
 
 最后返回 `j` 作为外层 `tsrm_realpath_r()` 的返回值，表示输入路径串规约化后的长度
 
-<p style="text-align: right;">
-by. Spark0618
-</p>
-
-
 

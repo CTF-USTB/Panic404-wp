@@ -286,7 +286,3 @@ if __name__ == "__main__":
 #flag{Th1s_1s_My_S1mpl3_Fl4g_f0r_CTF}
 ```
 
-<p style="text-align: right;">
-by. Huaji
-</p>
-

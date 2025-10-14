@@ -1,0 +1,57 @@
+{% extends "base.html" %}  {# 继承原主题模板 #}
+
+{% block content %}
+    {{ super() }}  {# 原页面内容 #}
+
+    {# 判断当前页面不是主页（index.md）时显示评论区 #}
+    {% if page.url != "" and page.url != "/" %}
+    <div id="giscus-container"></div>
+    <script src="https://giscus.app/client.js"
+        data-repo="CTF-USTB/Panic404-wp"
+        data-repo-id="R_kgDOPyVijQ"
+        data-category="Comments"
+        data-category-id="DIC_kwDOPyVijc4CwlH4"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+    </script>
+    <script>
+    function updateGiscusTheme(theme) {
+      const iframe = document.querySelector('iframe.giscus-frame');
+      if (!iframe) return;
+      iframe.contentWindow.postMessage(
+        {
+          giscus: { setConfig: { theme: theme } }
+        },
+        'https://giscus.app'
+      );
+    }
+
+    function setInitialGiscusTheme() {
+      const darkRadio = document.querySelector('input[data-md-color-scheme="slate"]');
+      if (darkRadio && darkRadio.checked) updateGiscusTheme('dark');
+      else updateGiscusTheme('light');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // 初始化
+      setInitialGiscusTheme();
+
+      // 直接监听两个主题切换按钮点击事件
+      const lightBtn = document.querySelector('label[for="__palette_0"]');
+      const darkBtn  = document.querySelector('label[for="__palette_1"]');
+
+      if (lightBtn && darkBtn) {
+        lightBtn.addEventListener('click', () => updateGiscusTheme('light'));
+        darkBtn.addEventListener('click', () => updateGiscusTheme('dark'));
+      }
+    });
+    </script>
+    {% endif %}
+{% endblock %}

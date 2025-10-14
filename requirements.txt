@@ -3,3 +3,4 @@ mkdocs-material>=9.5.0
 mkdocs-toggle-sidebar-plugin>=0.0.8
 mkdocs-macros-plugin>=1.0.5
 pymdown-extensions>=9.5.0
+-e .
