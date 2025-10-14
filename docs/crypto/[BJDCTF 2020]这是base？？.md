@@ -1,4 +1,4 @@
-# BJDCTF2020![题目](https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251009233339999.png)
+![](https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251009233339999.png)
 
 题目给了一个自定义的base64字典，与标准字典不同。猜测应该是替换加密，可以写一个脚本，把密文中的每个字符替换回标准 Base64 字符
 
