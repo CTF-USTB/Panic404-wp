@@ -18,9 +18,13 @@
 
 ![image-20251003192820147](https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251003213657302.png)
 
-成功解壓後得到一個 txt 文件，里面內容為 ``XHU2Nlx1NmNcdTYxXHU2N1x1N2JcdTY4XHU2MVx1NjNcdTZiXHU2NVx1NzI=``
+成功解壓後得到一個 txt 文件，里面內容為``XHU2Nlx1NmNcdTYxXHU2N1x1N2JcdTY4XHU2MVx1NjNcdTZiXHU2NVx1NzI=``
 
-猜測為 base64 加密，通過在線工具解密(https://ctf.bugku.com/tool/base64)，得到 ![image-20251003193041600](https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251003213657303.png)
+猜測為 base64 加密，通過在線工具解密(https://ctf.bugku.com/tool/base64)
+
+得到
+
+![image-20251003193041600](https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251003213657303.png)
 
 繼續用在線工具處理 Unicode 碼，得到 **flag{hacker**
 
@@ -60,6 +64,10 @@
 
 解碼得 **3oD54e**，和前面的部分 flag 組合在一起，可以得到 flag{hacker3oD54e12580}，提交後提示不正確，查看題目中的評論得知中間是 base58 加密，再解密得到中間部分 flag 為 misc
 
-![image-20251003205059121](https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251003213657309.png) 所以正確的flag：flag{hackermisc12580}
+![image-20251003205059121](https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251003213657309.png)
+
+
+
+ 所以正確的flag：flag{hackermisc12580}
 
 ![image-20251003205159250](https://cdn.jsdelivr.net/gh/CTF-USTB/Panic404-wp-images/images/20251003213657310.png)
