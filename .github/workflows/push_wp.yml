@@ -33,7 +33,7 @@ jobs:
           -H "Accept: application/vnd.github+json")
 
           # 提取新增文件（added）
-          ADDED_FILES=$(echo "$FILES_JSON" | jq -r '[.[] | select(.status=="added") | .filename | select(test("^docs/.*\\.md$"))]')
+          ADDED_FILES=$(echo "$FILES_JSON" | jq -c '[.[] | select(.status=="added") | .filename | select(test("^docs/.*\\.md$"))]')
           echo "ADDED_FILES=$ADDED_FILES" >> $GITHUB_ENV
 
           # 提取重命名文件 (renamed)，包括旧文件名
